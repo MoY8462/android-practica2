@@ -44,7 +44,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textAutoComplete|textCapWords"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:textColorHint="#2E7D32"
+            tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
@@ -107,7 +109,9 @@
             android:id="@+id/txtAssesment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:freezesText="false"
             android:inputType="number"
+            android:maxLength="1"
             android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 

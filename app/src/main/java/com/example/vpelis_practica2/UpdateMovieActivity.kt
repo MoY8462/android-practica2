@@ -105,17 +105,32 @@ class UpdateMovieActivity : AppCompatActivity() {
                     val year = binnding.txtYear.text.toString()
                     val assessment = binnding.txtAssesment.text.toString()
 
-                    if(isEntryValid(title,category,year,assessment)){
-                        movieEntity = MovieEntity(movieId,title,category,year,assessment)
-                        moviesBD.moviesDao().update(movieEntity)
-                        Toast.makeText(this@UpdateMovieActivity,"Cambios guardados", Toast.LENGTH_LONG).show()
-                        val intent = Intent(this@UpdateMovieActivity, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                    when {
+                        title.isEmpty() -> {
+                            binnding.txtTitle.error = getString(R.string.require)
+                        }
+                        year.isEmpty() -> {
+                            binnding.txtYear.error = getString(R.string.require)
+                        }
+                        assessment.isEmpty() -> {
+                            binnding.txtAssesment.error = getString(R.string.require)
+                        }
+                        year.toFloat() <= 1500 -> {
+                            binnding.txtYear.error = getString(R.string.year_error)
+                        }
+                        year.toFloat() >= 2025 -> {
+                            binnding.txtYear.error = getString(R.string.year_error)
+                        }
+                        else -> {
+                            movieEntity = MovieEntity(movieId,title,category,year,assessment)
+                            moviesBD.moviesDao().update(movieEntity)
+                            Toast.makeText(this@UpdateMovieActivity,getString(R.string.save_changes), Toast.LENGTH_LONG).show()
+                            val intent = Intent(this@UpdateMovieActivity, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
                     }
-                    else{
-                        Toast.makeText(this@UpdateMovieActivity,"Verifica la información", Toast.LENGTH_LONG).show()
-                    }
+
                 }
 
                 btnDelete.setOnClickListener {
@@ -132,10 +147,4 @@ class UpdateMovieActivity : AppCompatActivity() {
 
     }
 
-    fun isEntryValid(title:String, category: String, year: String, assessment:String): Boolean{
-        if(title.isBlank() || category.isBlank() || year.isBlank() || assessment.isBlank()) {
-            return false
-        }
-        return true
-    }
 }

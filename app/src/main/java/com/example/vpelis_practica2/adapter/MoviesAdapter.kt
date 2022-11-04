@@ -45,15 +45,15 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
                 txtAssessment.text = item.assessment
                 when (item.category){
                     "comedy" -> {   imgGenre.setImageResource(R.drawable.comedy_movie)
-                                    txtGenre.text = "Comedia"}
+                                    txtGenre.setText(R.string.comedy_genre) }
                     "action" -> {   imgGenre.setImageResource(R.drawable.action_movie)
-                                    txtGenre.text = "Acción"}
+                                    txtGenre.setText(R.string.action_genre)}
                     "horror" -> {   imgGenre.setImageResource(R.drawable.horror_movies)
-                                    txtGenre.text = "Terror"}
+                                    txtGenre.setText(R.string.horror_genre)}
                     "childish" -> { imgGenre.setImageResource(R.drawable.child_movie)
-                                    txtGenre.text = "Infantiles"}
+                                    txtGenre.setText(R.string.child_genre)}
                     "documentaries" -> {    imgGenre.setImageResource(R.drawable.documentaries_movie)
-                                            txtGenre.text = "Documentales"}
+                                            txtGenre.setText(R.string.documentaries_genre)}
                 }
 
                 root.setOnClickListener {

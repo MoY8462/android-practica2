@@ -6,6 +6,18 @@
     <string name="button_add">Añadir</string>
     <string name="category_movie">Género</string>
     <string name="slogan">¡Con VPelís jamás volverás a olvidar un título de alguna película!</string>
+    <string name="require">Valor requerido.</string>
+    <string name="verify">Verifica la información</string>
+    <string name="add_movie">Película Agregada.</string>
+    <string name="save_changes">Cambios guardados.</string>
+    <string name="comedy_genre">Comedia</string>
+    <string name="action_genre">Acción</string>
+    <string name="horror_genre">Terror</string>
+    <string name="child_genre">Infantiles</string>
+    <string name="documentaries_genre">Documentales</string>
+    <string name="button_save">Guardar</string>
+    <string name="button_delete">Borrar</string>
+    <string name="year_error">Ingresa un año válido (1500,2025).</string>
     <string-array name="categories">
         <item>Acción</item>
         <item>Comedia</item>

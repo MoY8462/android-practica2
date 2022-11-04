@@ -69,24 +69,35 @@ class AddMovieActivity : AppCompatActivity() {
                 val year = binding.txtYear.text.toString()
                 val assessment = binding.txtAssesment.text.toString()
 
-                if(isEntryValid(title,category,year,assessment)){
-                    movieEntity = MovieEntity(0,title,category,year,assessment)
-                    moviesBD.moviesDao().insert(movieEntity)
-                    Toast.makeText(this@AddMovieActivity,"Película Agregada", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this@AddMovieActivity, MainActivity::class.java)
-                    startActivity(intent)
+                when {
+                    title.isEmpty() -> {
+                        binding.txtTitle.error = getString(R.string.require)
+                    }
+                    year.isEmpty() -> {
+                        binding.txtYear.error = getString(R.string.require)
+                    }
+                    year.toFloat() <= 1500 -> {
+                        binding.txtYear.error = getString(R.string.year_error)
+                    }
+                    year.toFloat() >= 2025 -> {
+                        binding.txtYear.error = getString(R.string.year_error)
+                    }
+                    assessment.isEmpty() -> {
+                        binding.txtAssesment.error = getString(R.string.require)
+                    }
+                    else -> {
+                        movieEntity = MovieEntity(0,title,category,year,assessment)
+                        moviesBD.moviesDao().insert(movieEntity)
+                        Toast.makeText(this@AddMovieActivity,getString(R.string.add_movie), Toast.LENGTH_LONG).show()
+                        val intent = Intent(this@AddMovieActivity, MainActivity::class.java)
+                        startActivity(intent)
+                    }
+
+
                 }
-                else{
-                    Toast.makeText(this@AddMovieActivity,"Verifica la información", Toast.LENGTH_LONG).show()
-                }
+
             }
         }
     }
 
-    fun isEntryValid(title:String, category: String, year: String, assessment:String): Boolean{
-        if(title.isBlank() || category.isBlank() || year.isBlank() || assessment.isBlank()) {
-            return false
-        }
-        return true
-    }
 }
