@@ -83,7 +83,14 @@ class UpdateMovieActivity : AppCompatActivity() {
                 movieAssesment = movie.assessment
 
                 txtTitle.setText(movieTitle)
-                categorySpinner.setTag(2)
+                when (movieGenre){
+                    "comedy" -> {   categorySpinner.setSelection(1)}
+                    "action" -> {   categorySpinner.setSelection(0)}
+                    "horror" -> {   categorySpinner.setSelection(2)}
+                    "childish" -> { categorySpinner.setSelection(3)}
+                    "documentaries" -> { categorySpinner.setSelection(4)}
+                }
+
                 txtYear.setText(movieYear)
                 txtAssesment.setText(movieAssesment)
 
