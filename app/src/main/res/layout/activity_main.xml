@@ -35,7 +35,7 @@
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/add"
-        app:backgroundTint="#4CAF50"
+        app:backgroundTint="@color/blue_grotto_100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@color/white" />

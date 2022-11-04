@@ -63,7 +63,6 @@ class UpdateMovieActivity : AppCompatActivity() {
                     2 -> { spinnerSelect = "horror"}
                     3 -> { spinnerSelect = "childish"}
                     4 -> { spinnerSelect = "documentaries"}
-                    5 -> { spinnerSelect = "family"}
                 }
 
             }

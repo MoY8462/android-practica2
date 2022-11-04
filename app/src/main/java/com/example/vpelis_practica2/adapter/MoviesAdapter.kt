@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vpelis_practica2.R
 import com.example.vpelis_practica2.UpdateMovieActivity
 import com.example.vpelis_practica2.data.MovieEntity
 import com.example.vpelis_practica2.databinding.CustomElementBinding
@@ -42,6 +43,18 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
                 txtMovie.text = item.title
                 txtGenre.text = item.category
                 txtAssessment.text = item.assessment
+                when (item.category){
+                    "comedy" -> {   imgGenre.setImageResource(R.drawable.comedy_movie)
+                                    txtGenre.text = "Comedia"}
+                    "action" -> {   imgGenre.setImageResource(R.drawable.action_movie)
+                                    txtGenre.text = "Acción"}
+                    "horror" -> {   imgGenre.setImageResource(R.drawable.horror_movies)
+                                    txtGenre.text = "Terror"}
+                    "childish" -> { imgGenre.setImageResource(R.drawable.child_movie)
+                                    txtGenre.text = "Infantiles"}
+                    "documentaries" -> {    imgGenre.setImageResource(R.drawable.documentaries_movie)
+                                            txtGenre.text = "Documentales"}
+                }
 
                 root.setOnClickListener {
 

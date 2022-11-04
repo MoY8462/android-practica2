@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="turquoise">#31B4F2</color>
+    <color name="blue">#0000FF</color>
+    <color name="blue_grotto">#025492</color>
+    <color name="blue_grotto_100">#014A81</color>
+    <color name="gold">#F8CF40</color>
 </resources>
