@@ -2,11 +2,13 @@ package com.example.vpelis_practica2.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vpelis_practica2.UpdateMovieActivity
 import com.example.vpelis_practica2.data.MovieEntity
 import com.example.vpelis_practica2.databinding.CustomElementBinding
 
@@ -42,10 +44,10 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
                 txtAssessment.text = item.assessment
 
                 root.setOnClickListener {
-                    /*
-                    val intent= Intent(context,ListMovieFragment::class.java)
-                    intent.putExtra(BUNDLE_NOTE_ID, item.id)
-                    context.startActivity(intent)*/
+
+                    val intent= Intent(context,UpdateMovieActivity::class.java)
+                    intent.putExtra("bundle_movie_id", item.id)
+                    context.startActivity(intent)
                 }
 
             }

@@ -1,5 +1,6 @@
 package com.example.vpelis_practica2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -72,8 +73,8 @@ class AddMovieActivity : AppCompatActivity() {
                     movieEntity = MovieEntity(0,title,category,year,assessment)
                     moviesBD.moviesDao().insert(movieEntity)
                     Toast.makeText(this@AddMovieActivity,"Película Agregada", Toast.LENGTH_LONG).show()
-                    //val intent = Intent(this, MainActivity::class.java)
-                    //startActivity(intent)
+                    val intent = Intent(this@AddMovieActivity, MainActivity::class.java)
+                    startActivity(intent)
                 }
                 else{
                     Toast.makeText(this@AddMovieActivity,"Verifica la información", Toast.LENGTH_LONG).show()

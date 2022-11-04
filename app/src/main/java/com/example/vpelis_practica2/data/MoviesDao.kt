@@ -8,10 +8,10 @@ interface MoviesDao {
     @Query("SELECT * from movies ORDER BY title ASC")
     fun getItems(): MutableList<MovieEntity>
 
-    @Query("SELECT * from movies WHERE id = :id")
-    fun getItem(id: Int): Flow<MovieEntity>
+    @Query("SELECT * from movies WHERE id LIKE :id")
+    fun getItem(id: Int): MovieEntity
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(movie: MovieEntity)
 
     @Update
