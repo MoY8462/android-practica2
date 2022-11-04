@@ -4,4 +4,12 @@
     <string name="year_movie">Año</string>
     <string name="assesment_movie">Valoración</string>
     <string name="button_add">Añadir</string>
+    <string-array name="categories">
+        <item>Acción</item>
+        <item>Comedia</item>
+        <item>Terror</item>
+        <item>Infantiles</item>
+        <item>Documentales</item>
+        <item>Familiar</item>
+    </string-array>
 </resources>
