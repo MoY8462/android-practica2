@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VPelis</string>
+    <string name="slogan">With VPelís you will never forget a movie title again!</string>
+    <string name="require">Required value.</string>
+    <string name="add_movie">Added Movie</string>
+    <string name="save_changes">Changes saved</string>
+    <string name="comedy_genre">Comedy</string>
+    <string name="action_genre">Action</string>
+    <string name="horror_genre">Terror</string>
+    <string name="child_genre">Children</string>
+    <string name="documentaries_genre">Documentaries</string>
+    <string name="button_save">Save</string>
+    <string name="button_delete">Delete</string>
+    <string name="year_error">Please enter a valid year (1500,2025).</string>
+    <string name="title_movie">Title</string>
+    <string name="year_movie">Year</string>
+    <string name="assesment_movie">Assessment</string>
+    <string name="button_add">Add</string>
+    <string name="category_movie">Gender</string>
+    <string name="verify">Check the information</string>
+    <string-array name="categories">
+        <item>Action</item>
+        <item>Comedy</item>
+        <item>Terror</item>
+        <item>Children</item>
+        <item>Documentaries</item>
+    </string-array>
+</resources>
