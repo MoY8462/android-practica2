@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">VPelis_practica2</string>
+    <string name="title_movie">Titulo</string>
+    <string name="year_movie">Año</string>
+    <string name="assesment_movie">Valoración</string>
+    <string name="button_add">Añadir</string>
 </resources>
