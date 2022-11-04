@@ -43,11 +43,13 @@ class MainActivity : AppCompatActivity() {
             if(moviesBD.moviesDao().getItems().isNotEmpty()){
                 rvNoteList.visibility = View.VISIBLE
                 tvEmptyText.visibility = View.GONE
+                imgPelis.visibility = View.GONE
                 movieAdapter.differ.submitList(moviesBD.moviesDao().getItems())
                 setupRecyclerView()
             } else {
                 rvNoteList.visibility = View.GONE
                 tvEmptyText.visibility = View.VISIBLE
+                imgPelis.visibility = View.VISIBLE
             }
         }
     }

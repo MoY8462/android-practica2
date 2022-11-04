@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/amber"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -16,22 +17,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imgPelis"
+        android:layout_width="201dp"
+        android:layout_height="284dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon_pelis" />
+
     <TextView
         android:id="@+id/tvEmptyText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fontFamily="casual"
         android:gravity="center"
-        android:text="There is no Note!! :("
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="@string/slogan"
+        android:textColor="@color/blue_grotto_100"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAddMovie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/add"

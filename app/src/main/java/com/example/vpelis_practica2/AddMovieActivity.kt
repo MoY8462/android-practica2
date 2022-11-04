@@ -37,9 +37,9 @@ class AddMovieActivity : AppCompatActivity() {
         ArrayAdapter.createFromResource(
             this,
             R.array.categories,
-            android.R.layout.simple_spinner_item
+            R.layout.spinner_select
         ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            adapter.setDropDownViewResource(R.layout.spinner_items)
             spinner.adapter = adapter
         }
 

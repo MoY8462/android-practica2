@@ -48,9 +48,9 @@ class UpdateMovieActivity : AppCompatActivity() {
         ArrayAdapter.createFromResource(
             this,
             R.array.categories,
-            android.R.layout.simple_spinner_item
+            R.layout.spinner_select
         ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            adapter.setDropDownViewResource(R.layout.spinner_items)
             spinner.adapter = adapter
         }
 
@@ -84,11 +84,16 @@ class UpdateMovieActivity : AppCompatActivity() {
 
                 txtTitle.setText(movieTitle)
                 when (movieGenre){
-                    "comedy" -> {   categorySpinner.setSelection(1)}
-                    "action" -> {   categorySpinner.setSelection(0)}
-                    "horror" -> {   categorySpinner.setSelection(2)}
-                    "childish" -> { categorySpinner.setSelection(3)}
-                    "documentaries" -> { categorySpinner.setSelection(4)}
+                    "comedy" -> {   imgPelis.setImageResource(R.drawable.comedy_movie)
+                                    categorySpinner.setSelection(1)}
+                    "action" -> {   imgPelis.setImageResource(R.drawable.action_movie)
+                                    categorySpinner.setSelection(0)}
+                    "horror" -> {   imgPelis.setImageResource(R.drawable.horror_movies)
+                                    categorySpinner.setSelection(2)}
+                    "childish" -> { imgPelis.setImageResource(R.drawable.child_movie)
+                                    categorySpinner.setSelection(3)}
+                    "documentaries" -> { imgPelis.setImageResource(R.drawable.documentaries_movie)
+                                        categorySpinner.setSelection(4)}
                 }
 
                 txtYear.setText(movieYear)
